@@ -66,3 +66,18 @@ A generated app is considered finished when:
 - Arbitrary generated code is executed on the runner. Use this only in a trusted/private environment.
 - Browser hosting as a Static Site is not enough. This needs a Node Web Service.
 - Windows `.exe` packaging requires PyInstaller for Python apps or Electron tooling for Electron apps. If unavailable, the runner creates a zip package instead.
+
+
+## API keys: user-owned mode
+
+This build is designed so each user can use their own AI API keys.
+
+1. Open the deployed app.
+2. Expand **AI Keys — users bring their own**.
+3. Paste an OpenAI key and/or Claude/Anthropic key.
+4. Tick **Save keys in this browser** only if you trust the device.
+5. Click **Use these keys**.
+
+The keys are sent with each AI request to the WireStack server and are not stored in `.wirestack-state.json`. If saved, they are stored only in the user's browser `localStorage`.
+
+Render environment variables `OPENAI_API_KEY` and `ANTHROPIC_API_KEY` are now optional fallback keys, not required for normal user-owned-key usage.

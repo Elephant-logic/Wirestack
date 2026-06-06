@@ -1,0 +1,12 @@
+{
+  "name": "wirestack-boom-hybrid",
+  "version": "1.0.0",
+  "description": "Boom3-simple frontend with WireStack application brain, AI team, runner, tests and packaging behind the scenes.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {}
+}
